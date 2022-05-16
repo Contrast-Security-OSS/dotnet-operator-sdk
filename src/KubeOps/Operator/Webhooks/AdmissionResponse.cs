@@ -20,7 +20,7 @@ internal sealed class AdmissionResponse
     public string[] Warnings { get; init; } = Array.Empty<string>();
 
     [JsonPropertyName("patchType")]
-    public string? PatchType { get; set; }
+    public string? PatchType { get; set; } = JsonPatch;
 
     [JsonPropertyName("patch")]
     public string? Patch { get; set; }
