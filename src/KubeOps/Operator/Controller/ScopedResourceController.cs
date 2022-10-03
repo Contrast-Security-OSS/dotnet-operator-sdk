@@ -1,4 +1,7 @@
-﻿namespace KubeOps.Operator.Controller;
+﻿using System;
+using System.Threading.Tasks;
+
+namespace KubeOps.Operator.Controller;
 
 internal class ScopedResourceController : IManagedResourceController
 {
