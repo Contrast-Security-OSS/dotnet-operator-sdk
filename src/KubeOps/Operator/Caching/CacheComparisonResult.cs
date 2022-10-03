@@ -3,7 +3,7 @@
 /// <summary>
 /// Result for the <see cref="ResourceCache{TEntity}.Upsert"/> when comparison is done.
 /// </summary>
-internal enum CacheComparisonResult
+public enum CacheComparisonResult
 {
     /// <summary>
     /// <para>
