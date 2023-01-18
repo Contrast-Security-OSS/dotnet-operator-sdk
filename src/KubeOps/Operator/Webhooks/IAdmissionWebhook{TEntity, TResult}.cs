@@ -171,7 +171,7 @@ public interface IAdmissionWebhook<TEntity, TResult>
                 review.Response = response;
                 review.Response.Uid = review.Request.Uid;
 
-                logger.LogInformation(
+                logger.LogDebug(
                     @"AdmissionHook ""{name}"" did return ""{result}"" for ""{operation}"".",
                     Name,
                     review.Response?.Allowed,
