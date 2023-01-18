@@ -76,8 +76,11 @@ public interface IMutationWebhook<TEntity> : IAdmissionWebhook<TEntity, Mutation
             var to = result.ModifiedObject;
 
             var patch = KubernetesJsonDiffer.DiffObjects(from, to);
-            response.Patch = Convert.ToBase64String(Encoding.UTF8.GetBytes(patch.ToString()));
-            response.PatchType = AdmissionResponse.JsonPatch;
+            if (patch.Operations.Count > 0)
+            {
+                response.Patch = Convert.ToBase64String(Encoding.UTF8.GetBytes(patch.ToString()));
+                response.PatchType = AdmissionResponse.JsonPatch;
+            }
         }
 
         return response;

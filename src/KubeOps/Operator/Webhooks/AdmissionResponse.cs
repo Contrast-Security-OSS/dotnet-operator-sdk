@@ -14,7 +14,7 @@ internal sealed class AdmissionResponse
 
     public string[] Warnings { get; init; } = Array.Empty<string>();
 
-    public string? PatchType { get; set; } = JsonPatch;
+    public string? PatchType { get; set; }
 
     public string? Patch { get; set; }
 
