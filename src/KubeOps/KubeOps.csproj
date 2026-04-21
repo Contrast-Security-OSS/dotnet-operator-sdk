@@ -46,6 +46,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="15.1.3" />
         <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
             <_Parameter1>KubeOps.Testing</_Parameter1>
         </AssemblyAttribute>
